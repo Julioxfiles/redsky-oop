@@ -2,8 +2,16 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use App\Tests\Test;
+use App\Classes\User;
 
-$test = new Test();
+$user1 = new User();
+$user1->name = "Carlos";
+$user1->age = 25;
 
-echo $test->hello();
+$user2 = new User();
+$user2->name = "Ana";
+$user2->age = 30;
+
+echo $user1->greet();
+echo "<br>";
+echo $user2->greet();
